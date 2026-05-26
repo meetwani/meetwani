@@ -11,7 +11,7 @@
 <br/>
 
 <!-- Badges -->
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Meet%20Wani-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Meet%20Wani-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/meetwani/)
 [![Email](https://img.shields.io/badge/Email-wanimeet56@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:wanimeet56@gmail.com)
 [![Phone](https://img.shields.io/badge/Phone-+91%208446004518-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](tel:+918446004518)
 
@@ -150,11 +150,44 @@ meet_wani = {
 
 ---
 
-## 📈 Contribution Graph
+## 🐍 Contribution Snake
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=meetwani&theme=tokyo-night&hide_border=true&bg_color=0d1117&color=1D9E75&line=1D9E75&point=ffffff" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/meetwani/meetwani/output/github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/meetwani/meetwani/output/github-snake.svg" />
+    <img alt="github-snake" src="https://raw.githubusercontent.com/meetwani/meetwani/output/github-snake-dark.svg" />
+  </picture>
 </div>
+
+> ⚙️ **To enable the snake:** Go to your repo → **Actions** tab → New workflow → paste the YAML below and commit. It auto-runs daily!
+
+```yaml
+# .github/workflows/snake.yml
+name: Generate Snake
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
+      - uses: crazy-max/ghaction-github-pages@v3
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```
 
 ---
 
@@ -162,7 +195,7 @@ meet_wani = {
 
 ### 🤝 Let's Connect & Build Something Impactful!
 
-[![LinkedIn](https://img.shields.io/badge/Connect%20on%20LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com)
+[![LinkedIn](https://img.shields.io/badge/Connect%20on%20LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/meetwani/)
 [![Email Me](https://img.shields.io/badge/Email%20Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:wanimeet56@gmail.com)
 
 <br/>
